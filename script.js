@@ -73,9 +73,19 @@ logo.addEventListener("click", () => {
 
 function saveScore(name, score) {
   const scoreRef = db.ref("scores").push();
-  scoreRef.set({ name, score });
+  const userAgent = navigator.userAgent;
+  const timestamp = new Date().toISOString();
+
+  scoreRef.set({
+    name,
+    score,
+    userAgent,
+    timestamp
+  });
+
   loadLeaderboard();
 }
+
 
 function loadLeaderboard() {
   db.ref("scores")
