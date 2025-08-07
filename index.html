@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catch the ACM Logo</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>🎯 Catch the ACM Logo!</h1>
+  <div id="game">
+    <img id="acm-logo" src="assets/acm-logo.png" alt="ACM Logo"/>
+  </div>
+
+  <div id="hud">
+    <p>Score: <span id="score">0</span></p>
+    <p>Time Left: <span id="time">30</span>s</p>
+    <input id="player-name" type="text" placeholder="Enter your name"/>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div id="leaderboard">
+    <h2>🏆 Leaderboard</h2>
+    <ol id="scores-list"></ol>
+  </div>
+
+  <audio id="click-sound" src="assets/click.mp3" preload="auto"></audio>
+  <audio id="bg-music" src="assets/bg-music.mp3" preload="auto" loop></audio>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+  <script src="script.js"></script>
+ 
+
+</body>
+</html>
