@@ -76,12 +76,17 @@ function saveScore(name, score) {
   const userAgent = navigator.userAgent;
   const timestamp = new Date().toISOString();
 
-  scoreRef.set({
-    name,
-    score,
-    userAgent,
-    timestamp
-  });
+  const data = { name, score, userAgent, timestamp };
+
+  console.log("Saving score to Firebase:", data);
+
+  scoreRef.set(data)
+    .then(() => {
+      console.log("✅ Score saved successfully!");
+    })
+    .catch((error) => {
+      console.error("❌ Error saving score:", error);
+    });
 
   loadLeaderboard();
 }
