@@ -41,7 +41,7 @@ function startGame() {
     if (timeLeft <= 0) endGame(playerName);
   }, 1000);
 
-  moveInterval = setInterval(moveLogo, 800);
+  moveInterval = setInterval(moveLogo, 500);
 }
 
 function endGame(playerName) {
