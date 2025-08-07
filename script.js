@@ -1,7 +1,7 @@
 const firebaseConfig = {
   apiKey: "AIzaSyBJMbQO7gV2GE5_KtdyUwrjQGyEwC9-li8",
   authDomain: "catch-acm.firebaseapp.com",
-  databaseURL: "https://catch-acm-default-rtdb.europe-west1.firebasedatabase.app/",
+  databaseURL: "https://catch-acm-default-rtdb.europe-west1.firebasedatabase.app/", 
   projectId: "catch-acm",
   storageBucket: "catch-acm.firebasestorage.app",
   messagingSenderId: "29606956412",
@@ -91,7 +91,6 @@ function saveScore(name, score) {
 
   loadLeaderboard();
 }
-
 
 function loadLeaderboard() {
   db.ref("scores")
